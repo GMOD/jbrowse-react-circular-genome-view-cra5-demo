@@ -29,7 +29,7 @@
     "eject": "craco eject",
     "predeploy": "npm run build",
     "deploy": "aws s3 sync --delete build s3://jbrowse.org/demos/cgv-cra5/",
-    "postdeploy": "aws cloudfront create-invalidation --distribution-id E13LGELJOT4GQO --paths \"/demos/cgv-cra5/*\""
+    "postdeploy": "AWS_PAGER=\"\" aws cloudfront  create-invalidation --distribution-id E13LGELJOT4GQO --paths \"/demos/cgv-cra5/*\""
   },
   "eslintConfig": {
     "extends": [
