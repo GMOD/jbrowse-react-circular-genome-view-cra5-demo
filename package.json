@@ -4,7 +4,6 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@craco/craco": "^6.4.3",
     "@fontsource/roboto": "^4.5.5",
     "@jbrowse/plugin-linear-genome-view": "^2.2.0",
     "@jbrowse/react-circular-genome-view": "^2.2.0",
@@ -23,10 +22,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
-    "eject": "craco eject",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "aws s3 sync --delete build s3://jbrowse.org/demos/cgv-cra5/",
     "postdeploy": "AWS_PAGER=\"\" aws cloudfront  create-invalidation --distribution-id E13LGELJOT4GQO --paths \"/demos/cgv-cra5/*\""
