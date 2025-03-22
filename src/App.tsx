@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import '@fontsource/roboto'
 import {
   createViewState,
   JBrowseCircularGenomeView,
-} from '@jbrowse/react-circular-genome-view'
+} from '@jbrowse/react-circular-genome-view2'
 
-import assembly from './assembly'
-import tracks from './tracks'
-import defaultSession from './defaultSession'
+import { config } from './config'
 
 type ViewModel = ReturnType<typeof createViewState>
 
@@ -18,12 +16,10 @@ function View() {
 
   useEffect(() => {
     const state = createViewState({
-      assembly,
-      tracks,
+      ...config,
       onChange: (patch: any) => {
         setPatches(previous => previous + JSON.stringify(patch) + '\n')
       },
-      defaultSession,
     })
     setViewState(state)
   }, [])

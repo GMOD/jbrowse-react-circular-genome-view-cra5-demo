@@ -6,8 +6,6 @@ uses webpack 5)
 It uses craco to add the webpack NodePolyfillPlugin (used for Buffer polyfill,
 etc)
 
-## Demo of `@jbrowse/react-circular-genome-view` with CRA 5
-
 See this app running at https://jbrowse.org/demos/cgv-cra5/.
 
 ## Usage
